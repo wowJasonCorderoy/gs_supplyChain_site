@@ -1,40 +1,28 @@
 
 // Get DOM Elements
 const modal = document.querySelector('#my-modal');
-const modalBtn = document.querySelector('#modal-btn');
+const Btn1 = document.querySelector('#btn1');
+const Btn2 = document.querySelector('#btn2');
 const closeBtn = document.querySelector('.close');
 
-modalBtn.addEventListener('click', openModal);
+Btn1.addEventListener('click', openModal);
+Btn2.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 window.addEventListener('click', outsideClick);
-
-// Events
-// if(modalBtn){modalBtn.addEventListener('click', openModal);}
-// if(closeBtn){closeBtn.addEventListener('click', closeModal);}
-// if(window){window.addEventListener('click', outsideClick);}
-
 
 // Open
 function openModal() {
   console.log(this);
-  alert("Button clicked, id: "+this.id+", text: "+this.innerHTML);
-  var tt = "ghjjh"
+  //alert("Button clicked, id: "+this.id+", text: "+this.innerHTML);
+  
+  
+  var tt = "Button clicked, id: "+this.id+", text: "+this.innerHTML
   modal.style.display = 'block';
-  document.getElementById('my-modal').innerHTML = `<div class="modal-content">
-  <div class="modal-header">
-    <span class="close">&times;</span>
-    <h2>Modal Header 22</h2>
-  </div>
-  <div class="modal-body">
-    <p>New heading!!</p>
-    <p>
-      ${tt}
-    </p>
-  </div>
-  <div class="modal-footer">
-    <h3>Modal Footer</h3>
-  </div>
-</div>`
+  console.log(document.getElementsByClassName("modal-header"));
+
+  $('.modal-header h2').html( this.id );
+  $('.modal-body p:nth-child(2)').html( "Button clicked, id: "+this.id ); // Added to second paragraph with :nth-child(2)
+
 }
 
 // Close
