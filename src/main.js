@@ -17,11 +17,10 @@ function openModal(e) {
   //modal.style.display = 'block';
   console.log(document.getElementsByClassName("modal-header"));
 
-  $(".modal-header h2").html(e.target.id);
-  $(".modal-body p:nth-child(1)").html(
-    "Button clicked, id: " + e.target.className
-  ); // Added to second paragraph with :nth-child(2)
-  $(".modal-body p:nth-child(2)").html("Button clicked, id: " + e.target.id); // Added to second paragraph with :nth-child(2)
+  $(".modal-header h2").html(modal_dict[e.target.id].heading);
+  $(".modal-body p").html(modal_dict[e.target.id].body);
+  $(".modal-footer h3").html(modal_dict[e.target.id].footer);
+
   $(".modal").show();
 }
 
@@ -33,7 +32,27 @@ function closeModal(e) {
 
 // Close If Outside Click
 function outsideClick(e) {
-  if (e.target == document.querySelector('.modal')) {
+  if (e.target == document.querySelector(".modal")) {
     $(".modal").hide();
   }
 }
+
+// Create dict for modal content. key = button id.
+const modal_dict = {
+  btn1: {
+    heading: "heading for btn 1",
+    body: `<p>test btn 1</p>
+                        <p>
+                            blahdeeblah btn 1 blah.
+                          </p>`,
+    footer: "btn1 footer",
+  },
+  btn2: {
+    heading: "heading for btn 2",
+    body: `<p>test btn 2</p>
+                        <p>
+                            blahdeeblah btn 2 blah.
+                          </p>`,
+    footer: "btn2 footer",
+  },
+};
