@@ -1,39 +1,39 @@
-
 // Get DOM Elements
-const modal = document.querySelector('#my-modal');
-const Btn1 = document.querySelector('#btn1');
-const Btn2 = document.querySelector('#btn2');
-const closeBtn = document.querySelector('.close');
+//const modal = document.querySelector('.modal');
 
-Btn1.addEventListener('click', openModal);
-Btn2.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-window.addEventListener('click', outsideClick);
+// non jQuery event handling
+//window.addEventListener('click', outsideClick);
 
-// Open
-function openModal() {
-  console.log(this);
-  //alert("Button clicked, id: "+this.id+", text: "+this.innerHTML);
-  
-  
-  var tt = "Button clicked, id: "+this.id+", text: "+this.innerHTML
-  modal.style.display = 'block';
+//jQuery event handling
+$(".modalButton").click((e) => openModal(e));
+$(".close").click((e) => closeModal(e));
+$(".modal").click((e) => outsideClick(e));
+
+// Open a modal
+function openModal(e) {
+  console.log("printing e:");
+  console.log(e.target);
+
+  //modal.style.display = 'block';
   console.log(document.getElementsByClassName("modal-header"));
 
-  $('.modal-header h2').html( this.id );
-  $('.modal-body p:nth-child(2)').html( "Button clicked, id: "+this.id ); // Added to second paragraph with :nth-child(2)
-
+  $(".modal-header h2").html(e.target.id);
+  $(".modal-body p:nth-child(1)").html(
+    "Button clicked, id: " + e.target.className
+  ); // Added to second paragraph with :nth-child(2)
+  $(".modal-body p:nth-child(2)").html("Button clicked, id: " + e.target.id); // Added to second paragraph with :nth-child(2)
+  $(".modal").show();
 }
 
-// Close
-function closeModal() {
-  modal.style.display = 'none';
+// Close a modal
+function closeModal(e) {
+  //modal.style.display = 'none';
+  $(".modal").hide();
 }
 
 // Close If Outside Click
 function outsideClick(e) {
-  if (e.target == modal) {
-    modal.style.display = 'none';
+  if (e.target == document.querySelector('.modal')) {
+    $(".modal").hide();
   }
 }
-
