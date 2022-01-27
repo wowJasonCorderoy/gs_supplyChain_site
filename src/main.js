@@ -1,8 +1,3 @@
-// Get DOM Elements
-//const modal = document.querySelector('.modal');
-
-// non jQuery event handling
-//window.addEventListener('click', outsideClick);
 
 //jQuery event handling
 $(".modalButton").click((e) => openModal(e));
@@ -37,6 +32,7 @@ function outsideClick(e) {
   }
 }
 
+
 // Create dict for modal content. key = button id.
 const modal_dict = {
   btn1: {
@@ -44,15 +40,24 @@ const modal_dict = {
     body: `<p>test btn 1</p>
                         <p>
                             blahdeeblah btn 1 blah.
-                          </p>`,
+                          </p>
+                          <a href="https://www.google.com">link</a>`,
     footer: "btn1 footer",
   },
   btn2: {
     heading: "heading for btn 2",
     body: `<p>test btn 2</p>
                         <p>
-                            blahdeeblah btn 2 blah.
+                            btn 2 gigggady.
                           </p>`,
     footer: "btn2 footer",
+  },
+  btn3: {
+    heading: "heading for btn 3",
+    body: `<p>test btn 3</p>
+                        <p>
+                            btn 3 pressed.
+                          </p>`,
+    footer: "btn3 footer yay",
   },
 };

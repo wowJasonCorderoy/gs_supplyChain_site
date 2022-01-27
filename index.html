@@ -8,13 +8,25 @@
 
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="leader-line.min.js"></script>
+    <script src="node_modules/anseki-leader-line-6c51d10/leader-line.min.js"></script>
     <script src="src/main.js" defer></script>
   </head>
 
   <body>
+    <div class="button-container-0">
     <button id="btn1" class="modalButton">button 1</button>
     <button id="btn2" class="modalButton">button 2</button>
+    </div>
+
+    <div class="button-container-0">
+      <button id="btn3" class="modalButton">button 3</button>
+      <button id="btn4" class="modalButton">button 4</button>
+      </div>
+    
+      <div class="button-container-0">
+        <button id="btn5" class="modalButton">button 5</button>
+        </div>
+
 
     <div id="my-modal" class="modal">
       <div class="modal-content">
@@ -30,13 +42,15 @@
         </div>
       </div>
     </div>
+
   </body>
 
   <script>
-    new LeaderLine(
-    document.getElementById('btn1'),
-    document.getElementById('btn2')
-  );
-</script>
+    var lb1b3 = new LeaderLine(document.getElementById('btn1'), document.getElementById('btn3'));
+    var lb2b4 = new LeaderLine(document.getElementById('btn2'), document.getElementById('btn4'));
+    var lb3b5 = new LeaderLine( document.getElementById('btn3'), document.getElementById('btn5'));
+    var lb4b5 = new LeaderLine( document.getElementById('btn4'), document.getElementById('btn5'));
+
+  </script>
 
 </html>
