@@ -14,37 +14,37 @@
 
   <body>
     <div class="button-container-0">
-      <h4>Primary Processing </h4>
-      <button id="btn_Abattoir" class="modalButton">🔪 Abattoir</button>
+      <h4 style="position:absolute; top:110px; left:10px">Primary Processing </h4>
+      <button id="btn_Abattoir" class="modalButton" style="position:absolute; top:160px; left:10px">🔪 Abattoir Service Kill</button>
     </div>
 
     <div class="button-container-0">
       <h4></h4>
-      <button id="btn_hides_skin" class="modalButton">
+      <button id="btn_hides_skin" class="modalButton"  style="position:absolute; top:260px; left:250px">
         Hide/Skin Manufacturing
       </button>
-      <button id="btn_cold_storage" class="modalButton">🥶 3PL Cold Store</button>
+      <button id="btn_cold_storage" class="modalButton" class="modalButton" style="position:absolute; top:370px; left:280px">🥶 3PL Cold Store</button>
 
-      <button id="btn_supp_vendors" class="modalButton">
+      <button id="btn_supp_vendors" class="modalButton" style="position:absolute; top:80px; left:200px">
         Supplementary Vendors
       </button>
-      <button id="btn_vendor_lines" class="modalButton">Vendor Lines</button>
+      <button id="btn_vendor_lines" class="modalButton" style="position:absolute; top:30px; left:350px">Vendor Lines</button>
     </div>
 
     <div class="button-container-0">
-      <h4>Secondary Processing </h4>
-      <button id="btn_hilton" class="modalButton">🥩 Hilton</button>
+      <h4 style="position:absolute; top:110px; left:550px">Secondary Processing </h4>
+      <button id="btn_hilton" class="modalButton" style="position:absolute; top:160px; left:550px">📦 Hilton</button>
     </div>
 
     <div class="button-container-0">
       <h4></h4>
-      <button id="btn_wow_stores" class="modalButton">🛒 WOW Stores</button>
-      <button id="btn_agw_wholesale" class="modalButton">
+      <button id="btn_wow_stores" class="modalButton" style="position:absolute; top:160px; left:730px">🛒 WOW Stores</button>
+      <button id="btn_agw_wholesale" class="modalButton" style="position:absolute; top:310px; left:600px">
         AGW (Wholesale)
       </button>
       <div class="button-container-0">
-        <h5>Growth Channels</h5>
-        <button id="btn_International" class="modalButton">
+        <h5 style="position:absolute; top:360px; left:750px">Growth Channels</h5>
+        <button id="btn_International" class="modalButton" style="position:absolute; top:410px; left:750px">
           🌏International
         </button>
       </div>
@@ -67,50 +67,50 @@
   </body>
 
   <script>
-    var lb1b3 = new LeaderLine(
+    var lb_abtr_hds = new LeaderLine(
       document.getElementById("btn_Abattoir"),
       document.getElementById("btn_hides_skin"),
       { dash: true, size: 2, color: "red" }
     );
-    var lb2b4 = new LeaderLine(
+    var lb_abtr_cld = new LeaderLine(
       document.getElementById("btn_Abattoir"),
       document.getElementById("btn_cold_storage"),
       { dash: true, size: 2, color: "red" }
     );
-    var lb3b5 = new LeaderLine(
+    var lb_abtr_hlt = new LeaderLine(
       document.getElementById("btn_Abattoir"),
       document.getElementById("btn_hilton"),
       { dash: true, size: 2, color: "red" }
     );
-    var lb4b5 = new LeaderLine(
+    var lb_cld_hlt = new LeaderLine(
       document.getElementById("btn_cold_storage"),
       document.getElementById("btn_hilton"),
       { dash: true, size: 2, color: "blue" }
     );
-    var lb4b5 = new LeaderLine(
+    var lb_cld_int = new LeaderLine(
       document.getElementById("btn_cold_storage"),
       document.getElementById("btn_International"),
       { dash: true, size: 2, color: "blue" }
     );
-    var lb4b5 = new LeaderLine(
+    var lb_cld_whl = new LeaderLine(
       document.getElementById("btn_cold_storage"),
       document.getElementById("btn_agw_wholesale"),
       { dash: true, size: 2, color: "blue" }
     );
-    var lb3b5 = new LeaderLine(
+    var lb_spp_vnd = new LeaderLine(
       document.getElementById("btn_supp_vendors"),
       document.getElementById("btn_hilton"),
       { dash: true, size: 2, color: "orange" }
     );
-    var lb3b5 = new LeaderLine(
+    var lb_vndl_hlt = new LeaderLine(
       document.getElementById("btn_vendor_lines"),
       document.getElementById("btn_hilton"),
       { dash: true, size: 2, color: "purple" }
     );
-    var lb4b5 = new LeaderLine(
+    var lb_hlt_wow = new LeaderLine(
       document.getElementById("btn_hilton"),
       document.getElementById("btn_wow_stores"),
-      { dash: true, size: 2, color: "gray" }
+      { dash: true, size: 2, color: "brown" }
     );
   </script>
 </html>
