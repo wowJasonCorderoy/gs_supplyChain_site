@@ -1,5 +1,4 @@
 // theme changes
-
 $("#sketchy").click(function () {
   $("#theme").attr("href", "bootstrap.sketchy.css");
 });
@@ -12,7 +11,9 @@ $("#light").click(function () {
   $("#theme").attr("href", "bootstrap.litera.css");
 });
 
-
+$("#cyberpunk").click(function () {
+  $("#theme").attr("href", "bootstrap.vapor.css");
+});
 
 //jQuery event handling
 $(".modalButton").click((e) => openModal(e));
@@ -56,7 +57,7 @@ const modal_dict = {
                         <p>
                             blahdeeblah blah.
                           </p>
-                          <a href="https://www.google.com">link</a>`,
+                          <a href="https://www.google.com" target="_blank">link</a>`,
     footer: "Abattoir footer",
   },
   btn_hides_skin: {
@@ -65,7 +66,7 @@ const modal_dict = {
     <p>
         blahdeeblah blah.
       </p>
-      <a href="https://www.google.com">link</a>`,
+      <a href="https://www.google.com" target="_blank">link</a>`,
     footer: "Hide/Skin Manufacturing footer",
   },
   btn_cold_storage: {
@@ -74,7 +75,7 @@ const modal_dict = {
     <p>
         blahdeeblah blah.
       </p>
-      <a href="https://www.google.com">link</a>`,
+      <a href="https://www.google.com" target="_blank">link</a>`,
     footer: "3PL Cold Store footer yay",
   },
   btn_hilton: {
@@ -83,7 +84,7 @@ const modal_dict = {
     <p>
         blahdeeblah blah.
       </p>
-      <a href="https://www.google.com">link</a>`,
+      <a href="https://www.google.com" target="_blank">link</a>`,
     footer: "Hilton footer yay",
   },
   btn_International: {
@@ -92,7 +93,7 @@ const modal_dict = {
     <p>
         blahdeeblah blah.
       </p>
-      <a href="https://www.google.com">link</a>`,
+      <a href="https://www.google.com" target="_blank">link</a>`,
     footer: "International footer yay",
   },
   btn_supp_vendors: {
@@ -101,7 +102,7 @@ const modal_dict = {
     <p>
         blahdeeblah blah.
       </p>
-      <a href="https://www.google.com">link</a>`,
+      <a href="https://www.google.com" target="_blank">link</a>`,
     footer: "Supplementary Vendors footer yay",
   },
   btn_vendor_lines: {
@@ -110,7 +111,7 @@ const modal_dict = {
     <p>
         blahdeeblah blah.
       </p>
-      <a href="https://www.google.com">link</a>`,
+      <a href="https://www.google.com" target="_blank">link</a>`,
     footer: "Vendor Lines footer yay",
   },
   btn_wow_stores: {
@@ -119,7 +120,7 @@ const modal_dict = {
     <p>
         blahdeeblah blah.
       </p>
-      <a href="https://www.google.com">link</a>`,
+      <a href="https://www.google.com" target="_blank">link</a>`,
     footer: "WOW Stores footer yay",
   },
   btn_agw_wholesale: {
@@ -128,7 +129,7 @@ const modal_dict = {
     <p>
         blahdeeblah blah.
       </p>
-      <button onclick="window.open('http://www.google.com');">Open popup</button>
+      <a href="https://www.google.com" target="_blank">link</a>
       `,
     footer: "AGW (Wholesale) footer yay",
   },
