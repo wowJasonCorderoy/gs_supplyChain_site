@@ -5,33 +5,65 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- <link rel="stylesheet" href="styles.css" /> -->
-    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link id="theme" rel="stylesheet" href="bootstrap.litera.css" />
 
     <title>GS Supply Chain</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="node_modules/anseki-leader-line-6c51d10/leader-line.min.js"></script>
     <script src="src/main.js" defer></script>
-    
+
     <script
-    type="text/javascript"
-    src="https://tableau.woolworths.com.au/javascripts/api/viz_v1.js"
+      type="text/javascript"
+      src="https://tableau.woolworths.com.au/javascripts/api/viz_v1.js"
     ></script>
-    
   </head>
 
   <body>
+    <div
+      id="change-theme"
+      class="btn-group"
+      role="group"
+      aria-label="Basic radio toggle button group"
+      style="position: absolute; top: 10px; left: 700px"
+    >
+      <input
+        type="radio"
+        class="btn-check"
+        name="btnradio"
+        id="light"
+        autocomplete="off"
+        checked="checked"
+      />
+      <label class="btn btn-outline-primary" for="light">light</label>
+      <input
+        type="radio"
+        class="btn-check"
+        name="btnradio"
+        id="dark"
+        autocomplete="off"
+      />
+      <label class="btn btn-outline-primary" for="dark">dark</label>
+      <input
+        type="radio"
+        class="btn-check"
+        name="btnradio"
+        id="sketchy"
+        autocomplete="off"
+      />
+      <label class="btn btn-outline-primary" for="sketchy">sketchy</label>
+    </div>
 
-    <h1 style="position: absolute; top: 10px; left: centre; color: black">
+    <h1 style="position: absolute; top: 10px; left: centre">
       Greenstock Supply Chain
     </h1>
     <div class="button-container-0">
-      <h4 style="position: absolute; top: 210px; left: 110px; color: black">
+      <h4 style="position: absolute; top: 220px; left: 90px">
         Primary Processing
       </h4>
       <button
         id="btn_Abattoir"
-        class="modalButton rounded-corners"
-        style="position: absolute; top: 260px; left: 110px"
+        class="modalButton btn btn-primary"
+        style="position: absolute; top: 265px; left: 90px"
       >
         Abattoir Service Kill
       </button>
@@ -41,43 +73,43 @@
       <h4></h4>
       <button
         id="btn_hides_skin"
-        class="modalButton rounded-corners"
-        style="position: absolute; top: 360px; left: 350px"
+        class="modalButton btn btn-primary"
+        style="position: absolute; top: 330px; left: 350px"
       >
         Hide/Skin Manufacturing
       </button>
       <button
         id="btn_cold_storage"
-        class="modalButton rounded-corners"
-        style="position: absolute; top: 470px; left: 380px"
+        class="modalButton btn btn-primary"
+        style="position: absolute; top: 470px; left: 360px"
       >
         3PL Cold Store
       </button>
 
       <button
         id="btn_supp_vendors"
-        class="modalButton rounded-corners"
-        style="position: absolute; top: 180px; left: 300px"
+        class="modalButton btn btn-primary"
+        style="position: absolute; top: 170px; left: 300px"
       >
         Supplementary Vendors
       </button>
       <button
         id="btn_vendor_lines"
-        class="modalButton rounded-corners"
-        style="position: absolute; top: 130px; left: 450px"
+        class="modalButton btn btn-primary"
+        style="position: absolute; top: 120px; left: 450px"
       >
         Vendor Lines
       </button>
     </div>
 
     <div class="button-container-0">
-      <h4 style="position: absolute; top: 210px; left: 650px; color: black">
+      <h4 style="position: absolute; top: 220px; left: 650px">
         Secondary Processing
       </h4>
       <button
         id="btn_hilton"
-        class="modalButton rounded-corners"
-        style="position: absolute; top: 260px; left: 650px"
+        class="modalButton btn btn-primary"
+        style="position: absolute; top: 265px; left: 650px"
       >
         Hilton
       </button>
@@ -87,25 +119,25 @@
       <h4></h4>
       <button
         id="btn_wow_stores"
-        class="modalButton rounded-corners"
-        style="position: absolute; top: 260px; left: 830px"
+        class="modalButton btn btn-primary"
+        style="position: absolute; top: 265px; left: 830px"
       >
         WOW Stores
       </button>
       <button
         id="btn_agw_wholesale"
-        class="modalButton rounded-corners"
-        style="position: absolute; top: 410px; left: 700px"
+        class="modalButton btn btn-primary"
+        style="position: absolute; top: 390px; left: 700px"
       >
         AGW (Wholesale)
       </button>
       <div class="button-container-0">
-        <h5 style="position: absolute; top: 460px; left: 850px; color: black">
+        <h5 style="position: absolute; top: 470px; left: 850px">
           Growth Channels
         </h5>
         <button
           id="btn_International"
-          class="modalButton rounded-corners"
+          class="modalButton btn btn-primary"
           style="position: absolute; top: 510px; left: 850px"
         >
           International

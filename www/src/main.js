@@ -1,3 +1,19 @@
+// theme changes
+
+$("#sketchy").click(function () {
+  $("#theme").attr("href", "bootstrap.sketchy.css");
+});
+
+$("#dark").click(function () {
+  $("#theme").attr("href", "bootstrap.superhero.css");
+});
+
+$("#light").click(function () {
+  $("#theme").attr("href", "bootstrap.litera.css");
+});
+
+
+
 //jQuery event handling
 $(".modalButton").click((e) => openModal(e));
 $(".close").click((e) => closeModal(e));
@@ -116,6 +132,4 @@ const modal_dict = {
       `,
     footer: "AGW (Wholesale) footer yay",
   },
-
 };
-
