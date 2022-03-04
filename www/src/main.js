@@ -15,6 +15,10 @@ $("#cyberpunk").click(function () {
   $("#theme").attr("href", "bootstrap.vapor.css");
 });
 
+$("#hacker").click(function () {
+  $("#theme").attr("href", "hacker.css");
+});
+
 //jQuery event handling
 $(".modalButton").click((e) => openModal(e));
 $(".close").click((e) => closeModal(e));
