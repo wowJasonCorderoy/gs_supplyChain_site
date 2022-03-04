@@ -4,48 +4,111 @@
     <!-- <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
 
-    <title>Document</title>
+    <title>GS Supply Chain</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="node_modules/anseki-leader-line-6c51d10/leader-line.min.js"></script>
     <script src="src/main.js" defer></script>
+    
+    <script
+    type="text/javascript"
+    src="https://tableau.woolworths.com.au/javascripts/api/viz_v1.js"
+    ></script>
+    
   </head>
 
   <body>
+
+    <h1 style="position: absolute; top: 10px; left: centre; color: black">
+      Greenstock Supply Chain
+    </h1>
     <div class="button-container-0">
-      <h4 style="position:absolute; top:110px; left:10px">Primary Processing </h4>
-      <button id="btn_Abattoir" class="modalButton" style="position:absolute; top:160px; left:10px">🔪 Abattoir Service Kill</button>
+      <h4 style="position: absolute; top: 210px; left: 110px; color: black">
+        Primary Processing
+      </h4>
+      <button
+        id="btn_Abattoir"
+        class="modalButton rounded-corners"
+        style="position: absolute; top: 260px; left: 110px"
+      >
+        Abattoir Service Kill
+      </button>
     </div>
 
     <div class="button-container-0">
       <h4></h4>
-      <button id="btn_hides_skin" class="modalButton"  style="position:absolute; top:260px; left:250px">
+      <button
+        id="btn_hides_skin"
+        class="modalButton rounded-corners"
+        style="position: absolute; top: 360px; left: 350px"
+      >
         Hide/Skin Manufacturing
       </button>
-      <button id="btn_cold_storage" class="modalButton" class="modalButton" style="position:absolute; top:370px; left:280px">🥶 3PL Cold Store</button>
+      <button
+        id="btn_cold_storage"
+        class="modalButton rounded-corners"
+        style="position: absolute; top: 470px; left: 380px"
+      >
+        3PL Cold Store
+      </button>
 
-      <button id="btn_supp_vendors" class="modalButton" style="position:absolute; top:80px; left:200px">
+      <button
+        id="btn_supp_vendors"
+        class="modalButton rounded-corners"
+        style="position: absolute; top: 180px; left: 300px"
+      >
         Supplementary Vendors
       </button>
-      <button id="btn_vendor_lines" class="modalButton" style="position:absolute; top:30px; left:350px">Vendor Lines</button>
+      <button
+        id="btn_vendor_lines"
+        class="modalButton rounded-corners"
+        style="position: absolute; top: 130px; left: 450px"
+      >
+        Vendor Lines
+      </button>
     </div>
 
     <div class="button-container-0">
-      <h4 style="position:absolute; top:110px; left:550px">Secondary Processing </h4>
-      <button id="btn_hilton" class="modalButton" style="position:absolute; top:160px; left:550px">📦 Hilton</button>
+      <h4 style="position: absolute; top: 210px; left: 650px; color: black">
+        Secondary Processing
+      </h4>
+      <button
+        id="btn_hilton"
+        class="modalButton rounded-corners"
+        style="position: absolute; top: 260px; left: 650px"
+      >
+        Hilton
+      </button>
     </div>
 
     <div class="button-container-0">
       <h4></h4>
-      <button id="btn_wow_stores" class="modalButton" style="position:absolute; top:160px; left:730px">🛒 WOW Stores</button>
-      <button id="btn_agw_wholesale" class="modalButton" style="position:absolute; top:310px; left:600px">
+      <button
+        id="btn_wow_stores"
+        class="modalButton rounded-corners"
+        style="position: absolute; top: 260px; left: 830px"
+      >
+        WOW Stores
+      </button>
+      <button
+        id="btn_agw_wholesale"
+        class="modalButton rounded-corners"
+        style="position: absolute; top: 410px; left: 700px"
+      >
         AGW (Wholesale)
       </button>
       <div class="button-container-0">
-        <h5 style="position:absolute; top:360px; left:750px">Growth Channels</h5>
-        <button id="btn_International" class="modalButton" style="position:absolute; top:410px; left:750px">
-          🌏International
+        <h5 style="position: absolute; top: 460px; left: 850px; color: black">
+          Growth Channels
+        </h5>
+        <button
+          id="btn_International"
+          class="modalButton rounded-corners"
+          style="position: absolute; top: 510px; left: 850px"
+        >
+          International
         </button>
       </div>
     </div>
@@ -70,47 +133,47 @@
     var lb_abtr_hds = new LeaderLine(
       document.getElementById("btn_Abattoir"),
       document.getElementById("btn_hides_skin"),
-      { dash: true, size: 2, color: "red" }
+      { dash: true, size: 2, color: "gray" }
     );
     var lb_abtr_cld = new LeaderLine(
       document.getElementById("btn_Abattoir"),
       document.getElementById("btn_cold_storage"),
-      { dash: true, size: 2, color: "red" }
+      { dash: true, size: 2, color: "gray" }
     );
     var lb_abtr_hlt = new LeaderLine(
       document.getElementById("btn_Abattoir"),
       document.getElementById("btn_hilton"),
-      { dash: true, size: 2, color: "red" }
+      { dash: true, size: 2, color: "gray" }
     );
     var lb_cld_hlt = new LeaderLine(
       document.getElementById("btn_cold_storage"),
       document.getElementById("btn_hilton"),
-      { dash: true, size: 2, color: "blue" }
+      { dash: true, size: 2, color: "gray" }
     );
     var lb_cld_int = new LeaderLine(
       document.getElementById("btn_cold_storage"),
       document.getElementById("btn_International"),
-      { dash: true, size: 2, color: "blue" }
+      { dash: true, size: 2, color: "gray" }
     );
     var lb_cld_whl = new LeaderLine(
       document.getElementById("btn_cold_storage"),
       document.getElementById("btn_agw_wholesale"),
-      { dash: true, size: 2, color: "blue" }
+      { dash: true, size: 2, color: "gray" }
     );
     var lb_spp_vnd = new LeaderLine(
       document.getElementById("btn_supp_vendors"),
       document.getElementById("btn_hilton"),
-      { dash: true, size: 2, color: "orange" }
+      { dash: true, size: 2, color: "gray" }
     );
     var lb_vndl_hlt = new LeaderLine(
       document.getElementById("btn_vendor_lines"),
       document.getElementById("btn_hilton"),
-      { dash: true, size: 2, color: "purple" }
+      { dash: true, size: 2, color: "gray" }
     );
     var lb_hlt_wow = new LeaderLine(
       document.getElementById("btn_hilton"),
       document.getElementById("btn_wow_stores"),
-      { dash: true, size: 2, color: "brown" }
+      { dash: true, size: 2, color: "gray" }
     );
   </script>
 </html>

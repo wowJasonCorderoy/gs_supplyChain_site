@@ -5,6 +5,7 @@ $(".modal").click((e) => outsideClick(e));
 
 // Open a modal
 function openModal(e) {
+  $(".modal").hide();
   console.log("printing e:");
   console.log(e.target);
 
@@ -111,7 +112,10 @@ const modal_dict = {
     <p>
         blahdeeblah blah.
       </p>
-      <a href="https://www.google.com">link</a>`,
+      <button onclick="window.open('http://www.google.com');">Open popup</button>
+      `,
     footer: "AGW (Wholesale) footer yay",
   },
+
 };
+
